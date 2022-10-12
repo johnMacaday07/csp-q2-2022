@@ -7,7 +7,7 @@ const Form = () => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const input = JSON.parse(data);
+    const input = {data: JSON.parse(data)};
     console.log(input);
     axios.post("/api/dock", input).then((res) => {
       setData("");
