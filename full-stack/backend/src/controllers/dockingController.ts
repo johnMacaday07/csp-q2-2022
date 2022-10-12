@@ -10,8 +10,8 @@ const transformTransaction = (
   next: NextFunction
 ) => {
   const { data } = req.body;
-//   const input = JSON.parse(data);
   const input = data;
+  console.log(data);
     
   const output = input.map((trans: Transaction) => {
     let balance: number = 0;
