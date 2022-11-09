@@ -8,7 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const dockingRoutes_1 = __importDefault(require("./routes/dockingRoutes"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
-app.use(express_1.default.json());
+app.use(express_1.default.json({ limit: '50mb' }));
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use('/api', dockingRoutes_1.default);
 app.listen(8888, () => {
